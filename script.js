@@ -25,11 +25,10 @@ function deleteitem(event) {
     saveData()
 }
 
-
 function saveData(){
-    localStorage.setItem("data",ul.innerHTML)
+    localStorage.setItem("data",listitem.innerHTML)
 }
 
 function showTasks(){
-    ul.innerHTML = localStorage.getItem("data")
+    listitem.innerHTML = localStorage.getItem("data")
 }
