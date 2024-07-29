@@ -28,3 +28,8 @@ function saveData(){
     localStorage.setItem("data",ul.innerHTML)
 }
 
+function showTask(){
+    ul.innerHTML = localStorage.getItem("data")
+}
+showTask()
+
