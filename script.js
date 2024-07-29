@@ -15,13 +15,13 @@ function add() {
         ul.append(listitem)
         inputbox.value = ""
     }
-    saveData()
+    saveData();
 }
 
 
 function deleteitem(event) {
     event.target.parentElement.remove()
-    saveData()
+    saveData();
 }
 
 function saveData(){
