@@ -8,15 +8,14 @@ function add() {
 
     if (inputbox.value === "") {
         alert("You must write Something!")
-        saveData()
     }
     else {
         var listitem = document.createElement("li")
         listitem.innerHTML = "<input type='checkbox'>" + inputbox.value + "<button onclick='deleteitem(event)'>\u00d7</button>"
         ul.append(listitem)
         inputbox.value = ""
-        saveData()
     }
+    saveData()
 }
 
 
@@ -26,9 +25,6 @@ function deleteitem(event) {
 }
 
 function saveData(){
-    localStorage.setItem("data",listitem.innerHTML)
+    localStorage.setItem("data",ul.innerHTML)
 }
 
-function showTasks(){
-    listitem.innerHTML = localStorage.getItem("data")
-}
